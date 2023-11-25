@@ -9,10 +9,13 @@ public class ItemCollector : MonoBehaviour
 
     [SerializeField] private Text crytalsText;
 
+    [SerializeField] private AudioSource collectionSoundEffect;
+
     private void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.gameObject.CompareTag("Crystal"))
         {
+            collectionSoundEffect.Play();
             Destroy(collision.gameObject);
             crystals++;
             crytalsText.text = "Crystals: " + crystals;
