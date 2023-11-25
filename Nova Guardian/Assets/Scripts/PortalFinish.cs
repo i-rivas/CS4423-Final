@@ -5,11 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class PortalFinish : MonoBehaviour
 {
+    private AudioSource finishSound;
+
+    private bool levelCompleted = false;
+
+    private void Start()
+    {
+        finishSound = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.name == "Player")
+        if (collider.gameObject.name == "Player" && !levelCompleted)
         {
-            SceneManager.LoadScene("Main Menu");
+            finishSound.Play();
+            levelCompleted = true;
+            Invoke("CompleteLevel", 2F);
         }   
     }
+
+    private void CompleteLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
+
+
+
