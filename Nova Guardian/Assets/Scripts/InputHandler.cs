@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class InputHandler : MonoBehaviour
 {
-    public GameObject projectilePrefab; // Drag your projectile prefab here in the Inspector
-    public Transform launchPoint; // The point from where the projectile will be launched
+    public GameObject projectilePrefab;
+    public Transform launchPoint;
+    public GameObject player; // Reference to the PlayerScript
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) // Left mouse button
+        if (Input.GetButtonDown("Fire1")) // "Fire1" is typically the left mouse button or Ctrl
         {
             LaunchProjectile();
         }
@@ -15,17 +16,14 @@ public class InputHandler : MonoBehaviour
 
     void LaunchProjectile()
     {
-        // Instantiate the projectile at the launch point
+        // Check the 'flipX' property of the SpriteRenderer to determine the direction
+        bool isFacingRight = !player.GetComponent<SpriteRenderer>().flipX;
+    
+        // Determine the launch direction based on the facing direction
+        Vector2 launchDirection = isFacingRight ? Vector2.right : Vector2.left;
+    
+        // Instantiate the projectile at the launch point and launch it
         GameObject projectile = Instantiate(projectilePrefab, launchPoint.position, Quaternion.identity);
-
-        // Calculate the direction to launch the projectile
-        Vector3 launchDirection = CalculateLaunchDirection();
         projectile.GetComponent<Projectile>().Launch(launchDirection);
-    }
-
-    Vector3 CalculateLaunchDirection()
-    {
-        // Assuming you want to launch towards the camera's forward direction
-        return Camera.main.transform.forward;
     }
 }
