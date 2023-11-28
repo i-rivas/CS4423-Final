@@ -22,6 +22,11 @@ public class NewBehaviourScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Trap"))
         {
             Die();
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Die();
         }    
     }
 
