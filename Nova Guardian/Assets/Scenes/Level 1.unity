@@ -2242,7 +2242,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 9.265725
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2948,6 +2948,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3627907238057681360, guid: 1ee4f808edba37e4ab2d66a7e4d4ae24, type: 3}
   m_PrefabInstance: {fileID: 672788533}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &727950566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 727950567}
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &727950567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727950566}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.974531, y: -1.998471, z: 0.33323833}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1265016596}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &727979868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8861,6 +8893,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -3.97, y: -2.28, z: 180}
+--- !u!4 &1265016596 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 386985630984031402, guid: 8a8b53c284a1d374e956756dd48ff675, type: 3}
+  m_PrefabInstance: {fileID: 1383792881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1327406807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9023,19 +9060,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 727950567}
     m_Modifications:
     - target: {fileID: 386985630984031402, guid: 8a8b53c284a1d374e956756dd48ff675, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45.96
+      value: 32.985466
       objectReference: {fileID: 0}
     - target: {fileID: 386985630984031402, guid: 8a8b53c284a1d374e956756dd48ff675, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.97
+      value: -1.971529
       objectReference: {fileID: 0}
     - target: {fileID: 386985630984031402, guid: 8a8b53c284a1d374e956756dd48ff675, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.35364252
+      value: -0.6868808
       objectReference: {fileID: 0}
     - target: {fileID: 386985630984031402, guid: 8a8b53c284a1d374e956756dd48ff675, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9065,6 +9102,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4012534309157369458, guid: 8a8b53c284a1d374e956756dd48ff675, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 109411517}
     - target: {fileID: 8279432139311899816, guid: 8a8b53c284a1d374e956756dd48ff675, type: 3}
       propertyPath: m_Name
       value: Evil Jelly
@@ -11245,4 +11286,4 @@ SceneRoots:
   - {fileID: 1208524455}
   - {fileID: 1327406807}
   - {fileID: 1535256457}
-  - {fileID: 1383792881}
+  - {fileID: 727950567}
