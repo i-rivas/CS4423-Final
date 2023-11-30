@@ -18582,8 +18582,9 @@ GameObject:
   - component: {fileID: 1971712141}
   - component: {fileID: 1971712140}
   - component: {fileID: 1971712143}
+  - component: {fileID: 1971712144}
   m_Layer: 2
-  m_Name: Circle
+  m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18598,8 +18599,8 @@ Transform:
   m_GameObject: {fileID: 1971712138}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.32, y: -0.76, z: -0.35364252}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 15.056, y: -0.747, z: -0.35364252}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 454323873}
@@ -18687,12 +18688,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 1089756342, guid: 04bc307fb9661d94cb1ba8374d9ef877, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 9.125, y: 9.0625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18733,6 +18734,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!95 &1971712144
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971712138}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d069c062d3f190b4c906893cdedd33df, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2052791609
 GameObject:
   m_ObjectHideFlags: 0
@@ -18912,7 +18934,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2366917947070580893, guid: 0a99308ba3186904d8772e93a4207206, type: 2}
-  m_audioClip: {fileID: 8300000, guid: c393e6f86f403d34f92429bc49a46572, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 79cb1ca2bc2eae04cbd273e7e694250f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -19266,6 +19288,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 5869093657715127496, guid: ffec8663ce0f688459e206a449274521, type: 3}
+      propertyPath: m_Volume
+      value: 0.058
+      objectReference: {fileID: 0}
     - target: {fileID: 6346273555347395698, guid: ffec8663ce0f688459e206a449274521, type: 3}
       propertyPath: m_Name
       value: Player
@@ -19276,11 +19302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7649266431872533452, guid: ffec8663ce0f688459e206a449274521, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.32
+      value: 22.45
       objectReference: {fileID: 0}
     - target: {fileID: 7649266431872533452, guid: ffec8663ce0f688459e206a449274521, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.02
+      value: -3.91
       objectReference: {fileID: 0}
     - target: {fileID: 7649266431872533452, guid: ffec8663ce0f688459e206a449274521, type: 3}
       propertyPath: m_LocalPosition.z
